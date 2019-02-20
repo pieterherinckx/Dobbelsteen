@@ -17,6 +17,10 @@ public class Dobbelsteen
         this.rg = new Random();
     }
     
+    public Dobbelsteen(){
+        this(6):
+    }
+    
     public int getResultaat(){
         return resultaat;
     }
