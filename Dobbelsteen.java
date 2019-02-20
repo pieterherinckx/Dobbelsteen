@@ -18,7 +18,7 @@ public class Dobbelsteen
     }
     
     public Dobbelsteen(){
-        this(6):
+        this(6);
     }
     
     public int getResultaat(){
