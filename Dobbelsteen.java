@@ -1,31 +1,55 @@
 import java.util.Random;
+
 /**
- * Write a description of class Dobbelsteen here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * class Dobbelsteen - geef hier een beschrijving van deze class
+ *
+ * @author (jouw naam)
+ * @version (versie nummer of datum)
  */
 public class Dobbelsteen
 {
+    // declaratie van de klassevariabelen
     private int max;
     private int resultaat;
-    private Random rg;
+    private Random random;
     
+    /**
+     * Constructor van de klasse die de lokale variabele max als parameter krijgt die dan ingesteld wordt op de klasse variabele max.
+     */
     public Dobbelsteen(int max){
         this.max = max;
         this.resultaat = 0;
-        this.rg = new Random();
+        this.random = new Random();
     }
     
     public Dobbelsteen(){
         this(6);
     }
     
-    public int getResultaat(){
-        return resultaat;
+    /**
+     * Procedure om de worp te testen
+     */
+    public void gooi_test(){
+        //resultaat = resultaat + 1;
+        //resultaat += 1;
+        resultaat++;
+        if(resultaat > max){
+            resultaat = 1;
+        }
     }
     
+    /**
+     * Procedure om willekeurig te gooien
+     */
     public void gooi(){
-        resultaat = rg.nextInt(max)+1;    
+        resultaat = random.nextInt(max) + 1;
+        
+    }
+    
+    /**
+     * Functie om de waarde van het resultaat terug te sturen
+     */
+    public int getResultaat(){
+        return resultaat;
     }
 }
