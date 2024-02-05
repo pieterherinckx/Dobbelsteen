@@ -43,7 +43,6 @@ public class Dobbelsteen
      */
     public void gooi(){
         resultaat = random.nextInt(max) + 1;
-        
     }
     
     /**
