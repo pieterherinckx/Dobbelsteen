@@ -14,7 +14,10 @@ public class Dobbelsteen
     private Random random;
     
     /**
-     * Constructor van de klasse die de lokale variabele max als parameter krijgt die dan ingesteld wordt op de klasse variabele max.
+     * Constructor van de klasse die de lokale variabele max als parameter krijgt 
+     * die dan ingesteld wordt op de klasse variabele max.
+     * De variabele resultaat wordt geinitialiseerd
+     * Het object random wordt geinitialiseerd
      */
     public Dobbelsteen(int max){
         this.max = max;
@@ -22,6 +25,9 @@ public class Dobbelsteen
         this.random = new Random();
     }
     
+    /**
+     * Constructor overloading
+     */
     public Dobbelsteen(){
         this(6);
     }
@@ -43,6 +49,7 @@ public class Dobbelsteen
      */
     public void gooi(){
         resultaat = random.nextInt(max) + 1;
+        
     }
     
     /**
